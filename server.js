@@ -1,5 +1,9 @@
 const express = require('express')
 const app = express()
+const bycript = require('bcrypt')
+
+const users = []
+
 
 app.set('view-engine', 'ejs')
 app.use(express.urlencoded({ extended: false }))
@@ -21,7 +25,7 @@ app.get('/register', (req, res) => {
 })
 
 app.post('/register', (req, res) => {
-    req.body.name
+    req.body.name.email
 })
 
 app.listen(3000)
